@@ -1,34 +1,31 @@
 export interface User {
-    id: string;
-    username: string;
-    email: string;
-    firstName: string;
-    lastName: string;
-    createdAt: string;
-    updatedAt: string;
-  }
-  
-  export interface Task {
-    id: string;
-    title: string;
-    description: string;
-    dueDate: string | null;
-    isCompleted: boolean;
-    tags: string[];
-    userId: string;
-    createdAt: string;
-    updatedAt: string;
-  }
-  
-  export interface Comment {
-    id: string;
-    content: string;
-    taskId: string;
-    userId: string;
-    username: string;
-    createdAt: string;
-    updatedAt: string;
-  }
+  id: string;
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  createdAt: string;
+}
+
+export interface Task {
+  id: string;
+  title: string;
+  description: string;
+  dueDate: string | null;
+  isCompleted: boolean;
+  tags: string[];
+  userId: string;
+  createdAt: string;
+}
+
+export interface Comment {
+  id: string;
+  content: string;
+  taskId: string;
+  userId: string;
+  username: string;
+  createdAt: string;
+}
   
   export interface AuthContextType {
     currentUser: User | null;

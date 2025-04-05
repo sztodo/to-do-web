@@ -47,7 +47,7 @@ interface ProfileFormData {
         setFormError(error);
       }
     };
-  
+
     if (!currentUser) {
       return <div className="loading">Loading profile...</div>;
     }
@@ -107,7 +107,6 @@ interface ProfileFormData {
         <div className="profile-info">
           <h3>Account Information</h3>
           <p><strong>Account Created:</strong> {new Date(currentUser.createdAt).toLocaleDateString()}</p>
-          <p><strong>Last Updated:</strong> {new Date(currentUser.updatedAt).toLocaleDateString()}</p>
         </div>
       </div>
     );

@@ -234,7 +234,6 @@ const TaskDetail: React.FC = () => {
           <div className="task-dates">
             <p><strong>Due Date:</strong> {formatDate(task.dueDate)}</p>
             <p><strong>Created:</strong> {new Date(task.createdAt).toLocaleDateString()}</p>
-            <p><strong>Last Updated:</strong> {new Date(task.updatedAt).toLocaleDateString()}</p>
           </div>
           
           <div className="task-description">

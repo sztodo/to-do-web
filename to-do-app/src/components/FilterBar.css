@@ -21,9 +21,12 @@
   color: #666;
 }
 
-.filter-group input,
 .filter-group select {
   width: 100%;
+}
+
+.filter-group input,
+.filter-group select {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
