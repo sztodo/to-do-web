@@ -4,18 +4,20 @@ export interface User {
   email: string;
   firstName: string;
   lastName: string;
-  createdAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Task {
   id: string;
   title: string;
   description: string;
-  dueDate: string | null;
+  dueDate: Date | null;
   isCompleted: boolean;
   tags: string[];
   userId: string;
-  createdAt: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
 export interface Comment {
@@ -24,7 +26,7 @@ export interface Comment {
   taskId: string;
   userId: string;
   username: string;
-  createdAt: string;
+  createdAt: Date;
 }
   
   export interface AuthContextType {
@@ -59,7 +61,7 @@ export interface Comment {
   export interface TaskFormData {
     title: string;
     description: string;
-    dueDate: string | null;
+    dueDate: Date;
     tags: string[];
   }
   

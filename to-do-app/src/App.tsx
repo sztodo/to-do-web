@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./components/Profile";
 import TaskDetail from "./components/TaskDetails";
+import Calendar from "./components/Calendar";
 
 const App: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const App: React.FC = () => {
               <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
               <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
               <Route path="/tasks/:id" element={<PrivateRoute><TaskDetail /></PrivateRoute>} />
-              <Route path="/" element={<Navigate to="/dashboard" />} />
+              <Route path="/" element={<PrivateRoute><Calendar /></PrivateRoute>} />
             </Routes>
           </div>
         </div>
