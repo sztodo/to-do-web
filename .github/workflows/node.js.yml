@@ -48,5 +48,7 @@ jobs:
       if: matrix.node-version == '20.x' && github.ref == 'refs/heads/main'
       run: |
         mkdir -p deploy
-        echo "Version: $(node -p \"require('./package.json').version\")" > deploy/version.txt
+        version=$(node -p "require('./package.json').version")
+        echo "Version: $version" > deploy/version.txt
         cp -r build/* deploy/
+
