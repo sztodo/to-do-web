@@ -13,7 +13,7 @@ interface TaskListProps {
     const formatDate = (dateString: string | null): string => {
       if (!dateString) return 'No deadline';
       const date = new Date(dateString);
-      return date.toLocaleDateString();
+      return date.toLocaleDateString('ro-Ro');
     };
     
     const isPastDue = (dateString: string | null): boolean => {

@@ -30,7 +30,7 @@
 }
 
 .active-dot {
-  background-color: #2196f3;
+  background-color: #646cff;
 }
 
 .completed-dot {
@@ -107,7 +107,7 @@
 }
 
 .task-dot.active {
-  background-color: #2196f3;
+  background-color: #646cff;
 }
 
 .task-dot.completed {

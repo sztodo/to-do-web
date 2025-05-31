@@ -37,7 +37,7 @@
 }
 
 .btn-primary {
-  background-color: #2196f3;
+  background-color: #646cff;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -86,7 +86,7 @@
 .btn-text {
   background: none;
   border: none;
-  color: #2196f3;
+  color: #646cff;
   cursor: pointer;
   font-size: 14px;
   padding: 5px;
@@ -110,7 +110,7 @@
 
 /* src/components/Navbar.css */
 .navbar {
-  background-color: #2196f3;
+  background-color: #646cff;
   color: white;
   padding: 0 20px;
   display: flex;

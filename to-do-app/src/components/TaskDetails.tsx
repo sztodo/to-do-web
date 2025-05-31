@@ -177,10 +177,10 @@ const TaskDetail: React.FC = () => {
     }
   };
 
-  const formatDate = (dateString: string | null): string => {
-    if (!dateString) return 'No deadline';
-    const date = new Date(dateString);
-    return date.toLocaleDateString();
+  const formatDate = (dateInput: string | Date | null): string => {
+    if (!dateInput) return 'No deadline';
+    const date = dateInput instanceof Date ? dateInput : new Date(dateInput);
+    return date.toLocaleDateString('ro-Ro');
   };
 
   if (loading) {
