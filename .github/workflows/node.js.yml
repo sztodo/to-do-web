@@ -21,13 +21,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: List repo files
-      run: ls -R
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: to-do-app/node_modules
+        key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('to-do-app/package-lock.json') }}
+        restore-keys: |
+            ${{ runner.os }}-node-${{ matrix.node-version }}
     - name: Install dependencies
       run: |
         cd to-do-app
