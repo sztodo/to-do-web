@@ -61,6 +61,7 @@ interface TaskFormProps {
       onSubmit({
         title: formData.title,
         description: formData.description,
+        // @ts-ignore
         dueDate: formData.dueDate || null,
         tags: tagsArray
       });

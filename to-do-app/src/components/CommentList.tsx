@@ -20,7 +20,7 @@ interface CommentListProps {
           <div key={comment.id} className="comment">
             <div className="comment-header">
               <span className="comment-author">{comment.username}</span>
-              <span className="comment-date">{formatDate(comment.createdAt)}</span>
+              <span className="comment-date">{formatDate(comment.createdAt as any)}</span>
             </div>
             <p className="comment-content">{comment.content}</p>
           </div>

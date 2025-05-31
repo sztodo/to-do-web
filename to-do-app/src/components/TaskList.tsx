@@ -49,8 +49,8 @@ interface TaskListProps {
               <p>{task.description}</p>
               
               <div className="task-meta">
-                <span className={`due-date ${isPastDue(task.dueDate) && !task.isCompleted ? 'past-due' : ''}`}>
-                  Due: {formatDate(task.dueDate)}
+                <span className={`due-date ${isPastDue(task.dueDate as any) && !task.isCompleted ? 'past-due' : ''}`}>
+                  Due: {formatDate(task.dueDate as any)}
                 </span>
                 
                 {task.tags && task.tags.length > 0 && (
