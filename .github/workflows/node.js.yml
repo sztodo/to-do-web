@@ -26,6 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: List repo files
+      run: ls -R
     - name: Install dependencies
       run: |
         cd to-do-app
